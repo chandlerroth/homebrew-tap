@@ -1,13 +1,13 @@
 class Prj < Formula
   desc "CLI tool to manage and organize git projects"
-  homepage "https://github.com/chandlerroth/current-projects"
-  version "1.2.0"
+  homepage "https://github.com/chandlerroth/prj"
+  version "1.3.0"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/chandlerroth/current-projects/releases/download/v#{version}/prj-darwin-arm64.tar.gz"
-      sha256 "edd7dddc5d2c1d2b29d0c07b709464ce55a0356ec61f52b9664de7501d309c02"
+      url "https://github.com/chandlerroth/prj/releases/download/v#{version}/prj-darwin-arm64.tar.gz"
+      sha256 "7dcfdda5a7dff724cd5e648834c9c46f67655b8b60efd9095e0fbd4df46ba6ff"
 
       def install
         bin.install "prj-darwin-arm64" => "prj"
@@ -15,8 +15,8 @@ class Prj < Formula
     end
 
     on_intel do
-      url "https://github.com/chandlerroth/current-projects/releases/download/v#{version}/prj-darwin-x64.tar.gz"
-      sha256 "2c6ab8d231db42d8ba81d8cd3cca2f88cb40b051f7aa4cc7655ec6855b30e9b2"
+      url "https://github.com/chandlerroth/prj/releases/download/v#{version}/prj-darwin-x64.tar.gz"
+      sha256 "3911243af67c8be0f4bce47a89334701c6a613e6a2467e48ee7e95311633e291"
 
       def install
         bin.install "prj-darwin-x64" => "prj"
@@ -25,22 +25,12 @@ class Prj < Formula
   end
 
   on_linux do
-    url "https://github.com/chandlerroth/current-projects/releases/download/v#{version}/prj-linux-x64.tar.gz"
-    sha256 "28c0a437e34c4149820644a391a859cae5d96ea63ebff35e8c2cd481f420e226"
+    url "https://github.com/chandlerroth/prj/releases/download/v#{version}/prj-linux-x64.tar.gz"
+    sha256 "a3f31fe5c14f6f082d1e507f9a009a828a1b8af802ebcbf1be0b7aea27fde91d"
 
     def install
       bin.install "prj-linux-x64" => "prj"
     end
-  end
-
-  def caveats
-    <<~EOS
-      To enable shell integration (for `prj list` and `prj cd` to change directories),
-      add this to your ~/.zshrc or ~/.bashrc:
-
-        curl -o ~/.prj.sh https://raw.githubusercontent.com/chandlerroth/current-projects/main/prj.sh
-        source ~/.prj.sh
-    EOS
   end
 
   test do
