@@ -1,13 +1,13 @@
 class Prj < Formula
   desc "CLI tool to manage and organize git projects"
   homepage "https://github.com/chandlerroth/prj"
-  version "1.7.5"
+  version "1.7.6"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://github.com/chandlerroth/prj/releases/download/v#{version}/prj-darwin-arm64.tar.gz"
-      sha256 "c0cdf6c6ba744182f4e0179747f23a650ac8958542f190bc60278a0f7756c4e0"
+      sha256 "1f94b5138cfad63d4c7a76eae1e93c1525bd19679bca1583293136bd09b3faa8"
 
       def install
         bin.install "prj-darwin-arm64" => "prj"
@@ -16,7 +16,7 @@ class Prj < Formula
 
     on_intel do
       url "https://github.com/chandlerroth/prj/releases/download/v#{version}/prj-darwin-x64.tar.gz"
-      sha256 "5e46117d14175dae1f78add67f4cf898ac0c8ec88afbb5c7b52f81c55d3e7b5d"
+      sha256 "56eb28b9b1be54d5edc2ccff7a34418834738700364db99c4227418ed3b4c3b4"
 
       def install
         bin.install "prj-darwin-x64" => "prj"
@@ -26,7 +26,7 @@ class Prj < Formula
 
   on_linux do
     url "https://github.com/chandlerroth/prj/releases/download/v#{version}/prj-linux-x64.tar.gz"
-    sha256 "8b9481a4d3d34d0d9bddbcc69f3c392b52e4f2ce35c6c6fbb7cbc804a00cb39a"
+    sha256 "8e1b928f4ada19b573fc3444541087dd898f05c67aedb9c96c9b881f86a0d787"
 
     def install
       bin.install "prj-linux-x64" => "prj"
